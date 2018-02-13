@@ -1,0 +1,12 @@
+{
+  "name": "notier",
+  "version": "1.0.0",
+  "description": "Simple promise enabled wrapper around notification library notie.",
+  "main": "index.js",
+  "repository": "https://github.com/dbtek/notier",
+  "author": "Ismail Demirbilek <ce.demirbilek@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "notie": "^4.3.1"
+  }
+}
