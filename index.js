@@ -85,7 +85,7 @@ notier.confirm = (message, opts) => new Promise((resolve, reject) => {
  * @param  {String} options.submitText Submit text (confirm)
  * @param  {String} options.cancelText Cancel text (confirm)
  */
-notier.setTexts({ submitText, cancelText }) => {
-  texts.submit = submitText
-  texts.cancel = cancelText
+notier.setTexts({ submit, cancel }) => {
+  texts.submit = submit
+  texts.cancel = cancel
 }
