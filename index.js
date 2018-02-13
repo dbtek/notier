@@ -67,7 +67,7 @@ notier.error = (message, opts) => notier(message, Object.assign({}, {type: 'erro
  * @return {Promise}        Resolved if user accepts; rejected otherwise.
  */
 notier.confirm = (message, opts) => new Promise((resolve, reject) => {
-  notie.confirm(Object.assign({
+  notie.confirm(Object.assign({}, {
     text: message,
     submitText: texts.submit,
     cancelText: texts.cancel,
@@ -85,7 +85,7 @@ notier.confirm = (message, opts) => new Promise((resolve, reject) => {
  * @param  {String} options.submitText Submit text (confirm)
  * @param  {String} options.cancelText Cancel text (confirm)
  */
-notier.setTexts({ submit, cancel }) => {
+notier.setTexts = ({ submit, cancel }) => {
   texts.submit = submit
   texts.cancel = cancel
 }
