@@ -27,7 +27,7 @@ notier.confirm('Are you sure? This cannot be undone.')
   .then(data => {
     // user accepted
   })
-  .reject(() => {
+  .catch(() => {
     // user rejected
   })
 ```
