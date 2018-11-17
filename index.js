@@ -20,7 +20,7 @@ module.exports = notier = (message, opts) => {
     notie.alert(Object.assign({
       text: message,
       position: 'bottom'
-    }), (data) => {
+    }, opts), (data) => {
       resolve(data)
     }, (err) => {
       reject(err)
@@ -34,7 +34,7 @@ module.exports = notier = (message, opts) => {
  * @param  {Object=} opts    Notie options
  * @return {Promise}
  */
-notier.info = (message, opts) => notier(message, Object.assign({}, {type: 'info'}, opts))
+notier.info = (message, opts) => notier(message, Object.assign({type: 'info'}, opts))
 
 /**
  * Success type notification
@@ -42,7 +42,7 @@ notier.info = (message, opts) => notier(message, Object.assign({}, {type: 'info'
  * @param  {Object=} opts    Notie options
  * @return {Promise}
  */
-notier.success = (message, opts) => notier(message, Object.assign({}, {type: 'success'}, opts))
+notier.success = (message, opts) => notier(message, Object.assign({type: 'success'}, opts))
 
 /**
  * Warning type notification
@@ -50,7 +50,7 @@ notier.success = (message, opts) => notier(message, Object.assign({}, {type: 'su
  * @param  {Object=} opts    Notie options
  * @return {Promise}
  */
-notier.warning = (message, opts) => notier(message, Object.assign({}, {type: 'warning'}, opts))
+notier.warning = (message, opts) => notier(message, Object.assign({type: 'warning'}, opts))
 
 /**
  * Error type notification
@@ -58,7 +58,7 @@ notier.warning = (message, opts) => notier(message, Object.assign({}, {type: 'wa
  * @param  {Object=} opts    Notie options
  * @return {Promise}
  */
-notier.error = (message, opts) => notier(message, Object.assign({}, {type: 'error'}, opts))
+notier.error = (message, opts) => notier(message, Object.assign({type: 'error'}, opts))
 
 /**
  * Confirm notification. Ask a question to confirm action.
@@ -67,7 +67,7 @@ notier.error = (message, opts) => notier(message, Object.assign({}, {type: 'erro
  * @return {Promise}        Resolved if user accepts; rejected otherwise.
  */
 notier.confirm = (message, opts) => new Promise((resolve, reject) => {
-  notie.confirm(Object.assign({}, {
+  notie.confirm(Object.assign({
     text: message,
     submitText: texts.submit,
     cancelText: texts.cancel,
